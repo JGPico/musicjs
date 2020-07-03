@@ -1,9 +1,59 @@
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+header h1 {
+  margin: 50px 0px 30px 0px;
+  font-size: 40px;
+}
+
+header p {
+  font-size: 25px;
+}
+
+.pads {
+  width: 100%;
+  display: flex;
+}
+
+.pads > button {
+  height: 100px;
+  width: 100px;
+  flex: 1;
+  border: 0px;
+  border-radius: 8px;
+}
+
+.pad1 {
+  background: #60d394;
+}
+
+.pad2 {
+  background: #d36060;
+}
+
+.pad3 {
+  background: #c060d3;
+}
+
+.pad4 {
+  background: #d3d160;
+}
+
+.pad5 {
+  background: #6868d3;
+}
+
+.pad6 {
+  background: rgb(27, 209, 124);
 }
