@@ -1,46 +1,39 @@
 import React from "react";
+import useSound from 'use-sound';
+import bubbleSound from '../sounds/bubbles.mp3';
+import claySound from '../sounds/clay.mp3';
+import confettiSound from '../sounds/confetti.mp3';
+import glimmerSound from '../sounds/glimmer.mp3';
+import moonSound from '../sounds/moon.mp3';
+import ufoSound from '../sounds/ufo.mp3';
 
 export default function Pads() {
-  //   window.addEventListener("load", () => {
-  //     const sounds = document.querySelectorAll(".sound");
-  //     const pads = document.querySelectorAll(".pads div");
 
-  //     // Starting sounds
-  //     pads.forEach((pad, index) => {
-  //       pad.addEventListener("click", function () {});
-  //       sounds[index].play();
-  //     });
-  //   });
-
-  const handleClick = (event) => {
-    event.preventDefault();
-    console.log("button clicked");
-  };
+  const [bubble] = useSound(bubbleSound, { volume: 0.5 });
+  const [clay] = useSound(claySound, { volume: 0.5 });
+  const [confetti] = useSound(confettiSound, { volume: 0.5 });
+  const [glimmer] = useSound(glimmerSound, { volume: 0.5 });
+  const [moon] = useSound(moonSound, { volume: 0.5 });
+  const [ufo] = useSound(ufoSound, { volume: 0.5 });
 
   return (
     <div className="pads">
-      <button onClick={handleClick} className="pad1">
-        <audio className="sound" src="../sounds/bubbles.mp3"></audio>
+      <button onClick={bubble} className="pad1">
       </button>
 
-      <button className="pad2">
-        <audio className="sound" src="../sounds/clay.mp3"></audio>
+      <button onClick={clay} className="pad2">
       </button>
 
-      <button className="pad3">
-        <audio className="sound" src="../sounds/confetti.mp3"></audio>
+      <button onClick={confetti} className="pad3">
       </button>
 
-      <button className="pad4">
-        <audio className="sound" src="../sounds/glimmer.mp3"></audio>
+      <button onClick={glimmer} className="pad4">
       </button>
 
-      <button className="pad5">
-        <audio className="sound" src="../sounds/moon.mp3"></audio>
+      <button onClick={moon} className="pad5">
       </button>
 
-      <button className="pad6">
-        <audio className="sound" src="../sounds/ufo.mp3"></audio>
+      <button onClick={ufo} className="pad6">
       </button>
     </div>
   );
